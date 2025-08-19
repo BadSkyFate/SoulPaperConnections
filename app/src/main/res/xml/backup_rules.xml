@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+   Sample backup rules file; uncomment and customize as necessary.
+   See https://developer.android.com/guide/topics/data/autobackup
+   for details.
+   Note: This file is ignored for devices older than API 31
+   See https://developer.android.com/about/versions/12/backup-restore
+-->
+<full-backup-content>
+    <!--
+   <include domain="sharedpref" path="."/>
+   <exclude domain="sharedpref" path="device.xml"/>
+-->
+    <!-- Include Room DB -->
+    <include domain="database" path="soulpaper.db"/>
+    <include domain="database" path="soulpaper.db-wal"/>
+    <include domain="database" path="soulpaper.db-shm"/>
+
+    <!-- Include DataStore -->
+    <include domain="sharedpref" path="datastore/preferences_pb"/>
+
+    <!-- Exclude transient cache if you add one later -->
+    <!-- <exclude domain="files" path="cache/"/> -->
+</full-backup-content>
